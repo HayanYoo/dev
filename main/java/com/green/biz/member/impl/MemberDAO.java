@@ -6,7 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.green.biz.member.dto.MemberVO;
+import com.green.biz.member.AddressVO;
+import com.green.biz.member.MemberVO;
 
 
 @Repository
@@ -41,6 +42,11 @@ public class MemberDAO {
 		System.out.println("getMemberList() 기능처리 : 멤버 리스트");
 		
 		return mybatis.selectList("MemberDAO.getMemberList");
+	}
+	
+	// 동이름을 조건으로 주소 검색
+	public List<AddressVO> selectAddressByDong(AddressVO vo) {
+		return mybatis.selectList("MemberDAO.selectAddressByDong", vo);
 	}
 	
 	

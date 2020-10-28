@@ -33,7 +33,14 @@
 	]]>
 	</select>
 	
+	<!-- 주소 조회 -->
+	<select id="selectAddressByDong" resultType="address">
+	<![CDATA[
+	select * from address
+	where dong like '%' || #{dong} || '%'
+	]]>
 	
+	</select>
 	
 
 </mapper>

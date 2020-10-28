@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.green.biz.member.AddressVO;
 import com.green.biz.member.MemberService;
-import com.green.biz.member.dto.MemberVO;
+import com.green.biz.member.MemberVO;
 
 
 @Service
@@ -35,6 +36,12 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public List<MemberVO> getMemberList() {
 		return mDao.getMemberList();
+	}
+	
+	@Override
+	public List<AddressVO> selectAddressByDong(AddressVO vo) {
+
+		return mDao.selectAddressByDong(vo);
 	}
 
 

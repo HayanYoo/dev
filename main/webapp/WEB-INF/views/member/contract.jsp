@@ -5,7 +5,7 @@
 <%@ include file="sub_menu.html" %>   
   <article>
     <h2>Join Us</h2>
-    <form id="join" action="join_form" method="post" name="form">
+    <form id="join" action="join_form" method="post" name="formm">
         언제나 새로운 즐거움이 가득한 Nonage의 회원가입 페이지 입니다. <br>
        Nonage의 회원가입은 무료이며, 회원님의 개인신상에 관한 정보는 
        ‘정보통신망이용촉진 및 정보보호등에관한법률’에 의해 회원님의 동의없이
@@ -190,7 +190,7 @@
       <input type="radio" name="okon1" checked> 동의함 &nbsp; &nbsp; &nbsp;
       <input type="radio" name="okon1" checked> 동의안함
       </div>
-      <input type="submit" value="Next" class="submit"  onclick="go_next()" style="float: right;"> 
+      <input type="button" value="Next" class="submit"  onclick="go_next()" style="float: right;"> 
     </form>
   </article>
 <%@ include file="../footer.jsp" %>  

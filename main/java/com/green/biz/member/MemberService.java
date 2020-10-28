@@ -2,7 +2,7 @@ package com.green.biz.member;
 
 import java.util.List;
 
-import com.green.biz.member.dto.MemberVO;
+
 
 public interface MemberService {
 	
@@ -14,4 +14,5 @@ public interface MemberService {
 	
 	public List<MemberVO> getMemberList();
 
+	public List<AddressVO> selectAddressByDong(AddressVO vo) ;
 }
