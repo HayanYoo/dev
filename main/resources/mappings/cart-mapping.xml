@@ -11,17 +11,27 @@
 	
 	<select id="listCart" resultType="cart">
 	<![CDATA[
-	SELECT * FROM CART
-	WHERE ID = #{ID}
+	SELECT * FROM cart_view
+	WHERE id = #{id}
 	]]>
 	</select>
 	
 	<delete id="deleteCart">
 	<![CDATA[
-	DELETE CART
-	WHERE CSEQ = #{CSEQ}
+	DELETE FROM CART
+	WHERE cseq = #{cseq}
 	]]>
 	</delete>
+	
+	<update id="updateCart">
+		update cart Set result = '2'
+		where cseq = #{cseq}
+	</update>
+	
+	<select id ="totalPrice" resultType="int">
+	select * from view_totalprice
+	where id = #{id}
+	</select>
 	
 
 

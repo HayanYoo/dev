@@ -49,5 +49,17 @@ public class MemberDAO {
 		return mybatis.selectList("MemberDAO.selectAddressByDong", vo);
 	}
 	
+	public MemberVO getMemberByNameAndEmail(MemberVO vo) {
+		return mybatis.selectOne("MemberDAO.getMemberByNameAndEmail", vo);
+	}
+	
+	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo) {
+		return mybatis.selectOne("MemberDAO.getMemberByIdAndNameAndEmail", vo);
+	}
+	
+	// 비밀번호 변경
+	public void changePassword(MemberVO vo) {
+		mybatis.update("MemberDAO.changePassword", vo);
+	}
 	
 }

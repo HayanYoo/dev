@@ -15,4 +15,10 @@ public interface MemberService {
 	public List<MemberVO> getMemberList();
 
 	public List<AddressVO> selectAddressByDong(AddressVO vo) ;
+	
+	public MemberVO getMemberByNameAndEmail(MemberVO vo) ;
+	
+	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo);
+	
+	public void changePassword(MemberVO vo);
 }

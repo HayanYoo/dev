@@ -42,6 +42,24 @@
 	
 	</select>
 	
+	<!-- 사용자 이름과 이메일을 이용한 아이디 찾기 -->
+	<select id="getMemberByNameAndEmail" resultType="member">
+	select * from member
+	where name = #{name} and email = #{email}
+	</select>
+	
+	<!-- 사용자 아이디와 이름과 이메일을 이용한 비밀번호 찾기 -->
+	<select id="getMemberByIdAndNameAndEmail" resultType="member">
+	select * from member
+	where id = #{id} and name = #{name} and email = #{email}
+	</select>
+	
+	<update id="changePassword">
+	update member set pwd = #{pwd}
+	where id = #{id}
+	
+	</update>
+	
 
 </mapper>
 

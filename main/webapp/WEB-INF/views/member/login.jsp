@@ -5,7 +5,7 @@
 <%@ include file="sub_menu.html" %>       
   <article>
     <h1>Login</h1>
-    <form method="post" action="login">
+    <form method="post" action="login" name = "formm">
         <fieldset>
         <legend></legend>
           <label>User ID</label>
@@ -19,7 +19,7 @@
             <input type="button" value="회원가입" class="cancel"
                  onclick="location='join_form'">
             <input type="button" value="아이디 비밀번호 찾기" class="submit"
-                 onclick="location='find_id_form'">     
+                 onclick="find_id_form()">     
         </div>
     </form>  
   </article>

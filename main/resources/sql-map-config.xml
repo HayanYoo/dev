@@ -9,7 +9,7 @@
 		<typeAlias type="com.green.biz.product.dto.ProductVO" alias ="product"/>
 		<typeAlias type="com.green.biz.member.MemberVO" alias ="member"/>
 		<typeAlias type="com.green.biz.member.AddressVO" alias="address"/>
-		<typeAlias type="com.green.biz.cart.dto.CartVO" alias="cart"/>
+		<typeAlias type="com.green.biz.order.CartVO" alias="cart"/>
 	</typeAliases>
 	
  

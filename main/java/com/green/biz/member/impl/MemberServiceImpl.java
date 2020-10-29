@@ -45,5 +45,25 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 
+	@Override
+	public MemberVO getMemberByNameAndEmail(MemberVO vo) {
+		
+		return mDao.getMemberByNameAndEmail(vo);
+	}
+
+
+	@Override
+	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo) {
+		return mDao.getMemberByIdAndNameAndEmail(vo);
+	}
+
+
+	@Override
+	public void changePassword(MemberVO vo) {
+		mDao.changePassword(vo);
+		
+	}
+
+
 
 }
