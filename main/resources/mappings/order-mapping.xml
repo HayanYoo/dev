@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="OrderDAO">
+	<!-- 다음 주문번호를 생성하기 위한 SQL문 -->
+	<select id="selectMaxOseq" resultType="int">
+		select NVL2(MAX(oseq), MAX(oseq)+1, 1) from orders
+	</select>
+
+	<insert id="insertOrder">
+	insert into orders(oseq, id)
+	values (#{oseq}, #{id})
+	</insert>
+	
+	<insert id="insertOrderDetail">
+	insert into order_detail(odseq, oseq, pseq, quantity)
+	values (order_detail_seq.nextval, #{oseq}, #{pseq}, #{quantity})
+	</insert>
+	
+	<!-- 사용자별 주문내역 조회 -->
+	<select id="listOrderById" resultType="order">
+	select * from order_view
+	where id = #{id} and result like '%' || #{result} || '%' and oseq = #{oseq}
+	</select>
+	
+	<!-- 사용자별 주문번호 조회 -->
+	<select id="selectSeqOrdering" parameterType="String" resultType="Integer">
+	select distinct oseq from order_view
+	where id = #{id} and result='1' order by oseq desc
+	</select>
+</mapper>

@@ -3,8 +3,6 @@ package com.green.view.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +19,7 @@ import com.green.biz.product.dto.ProductVO;
 public class HomeController {
 	
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+
 	
 	@Autowired
 	private ProductService productService;

@@ -1,6 +1,6 @@
 package com.green.biz.member;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
@@ -14,7 +14,7 @@ public class MemberVO {
 	private String address; 
 	private String phone; 
 	private String useyn; 
-	private Date regdate;
+	private Timestamp regdate;
 
 
 }

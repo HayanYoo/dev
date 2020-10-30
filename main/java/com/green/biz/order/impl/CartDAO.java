@@ -21,15 +21,14 @@ public class CartDAO {
 		return mybatis.selectList("CartDAO.listCart", vo);
 	}
 	
-	public void deleteCart(CartVO vo) {
-		mybatis.delete("CartDAO.deleteCart", vo);
+	public void deleteCart(int cseq) {
+		mybatis.delete("CartDAO.deleteCart", cseq);
 	}
 	
 	public void updateCart(CartVO vo) {
 		mybatis.update("CartDAO.updateCart", vo);
 	}
+
 	
-	public int totalPrice(CartVO vo) {
-		return mybatis.selectOne("CartDAO.totalPrice", vo);
-	}
+	
 }

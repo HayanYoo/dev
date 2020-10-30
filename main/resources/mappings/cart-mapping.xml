@@ -16,7 +16,7 @@
 	]]>
 	</select>
 	
-	<delete id="deleteCart">
+	<delete id="deleteCart" parameterType="int">
 	<![CDATA[
 	DELETE FROM CART
 	WHERE cseq = #{cseq}
@@ -28,11 +28,7 @@
 		where cseq = #{cseq}
 	</update>
 	
-	<select id ="totalPrice" resultType="int">
-	select * from view_totalprice
-	where id = #{id}
-	</select>
-	
+
 
 
 </mapper>

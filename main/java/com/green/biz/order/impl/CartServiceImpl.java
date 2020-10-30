@@ -26,8 +26,8 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public void deleteCart(CartVO vo) {
-		cart.deleteCart(vo);
+	public void deleteCart(int cseq) {
+		cart.deleteCart(cseq);
 
 	}
 
@@ -37,9 +37,8 @@ public class CartServiceImpl implements CartService {
 		
 	}
 
-	@Override
-	public int totalPrice(CartVO vo) {
-		return cart.totalPrice(vo);
-	}
+
+
+
 
 }

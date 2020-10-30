@@ -10,6 +10,7 @@
 		<typeAlias type="com.green.biz.member.MemberVO" alias ="member"/>
 		<typeAlias type="com.green.biz.member.AddressVO" alias="address"/>
 		<typeAlias type="com.green.biz.order.CartVO" alias="cart"/>
+		<typeAlias type="com.green.biz.order.OrderVO" alias="order"/>
 	</typeAliases>
 	
  
@@ -18,6 +19,7 @@
  		<mapper resource="mappings/member-mapping.xml"/>
  		<mapper resource="mappings/member-mapping.xml"/>
  		<mapper resource="mappings/cart-mapping.xml"/>
+ 		<mapper resource="mappings/order-mapping.xml"/>
 	</mappers>
 	
 </configuration>

@@ -1,6 +1,7 @@
 package com.green.biz.order;
 
-import java.util.Date;
+import java.sql.Timestamp;
+
 
 import lombok.Data;
 
@@ -14,5 +15,5 @@ public class CartVO {
 	private String pname;
 	private int quantity;
 	private int price2;
-	private Date indate;
+	private Timestamp indate;
 }

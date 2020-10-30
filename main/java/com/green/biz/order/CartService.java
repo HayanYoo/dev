@@ -8,9 +8,8 @@ public interface CartService {
 	
 	public List<CartVO> listCart(CartVO vo);
 	
-	public void deleteCart(CartVO vo) ;
+	public void deleteCart(int cseq) ;
 	
 	public void updateCart(CartVO vo);
 
-	public int totalPrice(CartVO vo);
 }
