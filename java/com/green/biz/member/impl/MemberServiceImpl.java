@@ -65,5 +65,12 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 
+	@Override
+	public List<MemberVO> listMember(String key) {
+		return mDao.listMember(key);
+	}
+
+	
+
 
 }

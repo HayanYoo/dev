@@ -62,4 +62,8 @@ public class MemberDAO {
 		mybatis.update("MemberDAO.changePassword", vo);
 	}
 	
+	public List<MemberVO> listMember(String key) {
+		return mybatis.selectList("MemberDAO.listMember", key);
+	}
+	
 }

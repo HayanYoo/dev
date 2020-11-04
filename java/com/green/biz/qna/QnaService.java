@@ -9,5 +9,9 @@ public interface QnaService {
 	QnaVO getQna(int seq);
 
 	void insertQna(QnaVO vo);
+	
+	public List<QnaVO> listAllQna();
+	
+	public void updateQna(QnaVO vo);
 
 }

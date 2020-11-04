@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.green.biz.product.ProductService;
+import com.green.biz.product.SalesQuantity;
 import com.green.biz.product.dto.ProductVO;
 import com.green.biz.utils.Criteria;
 
@@ -63,6 +64,11 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<ProductVO> getListProductPaging(String name, Criteria cri) {
 		return productDAO.getListProductPaging(name, cri);
+	}
+
+	@Override
+	public List<SalesQuantity> getProductSales() {
+		return productDAO.getProductSales();
 	}
 
 }

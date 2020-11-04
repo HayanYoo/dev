@@ -21,4 +21,6 @@ public interface MemberService {
 	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo);
 	
 	public void changePassword(MemberVO vo);
+	
+	public List<MemberVO> listMember(String key);
 }

@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.green.biz.product.SalesQuantity;
 import com.green.biz.product.dto.ProductVO;
 import com.green.biz.utils.Criteria;
 
@@ -63,6 +64,11 @@ public class ProductDAO {
 		mybatis.update("ProductDAO.updateProduct", vo);
 	}
 	
-	
+	/*
+	 * 상품 판매 실적 조회
+	 */
+	public List<SalesQuantity> getProductSales() {
+		return mybatis.selectList("ProductDAO.getProductSales");
+	}
 
 }

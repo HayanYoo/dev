@@ -27,4 +27,12 @@ public class QnaDAO {
 	public void insertQna(QnaVO vo) {
 		mybatis.insert("QnaDAO.insertQna", vo);
 	}
+	
+	public List<QnaVO> listAllQna() {
+		return mybatis.selectList("QnaDAO.listAllQna");
+	}
+	
+	public void updateQna(QnaVO vo) {
+		mybatis.update("QnaDAO.updateQna", vo);
+	}
 }

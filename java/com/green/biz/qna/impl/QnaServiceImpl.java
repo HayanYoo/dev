@@ -29,4 +29,15 @@ public class QnaServiceImpl implements QnaService {
 
 	}
 
+	@Override
+	public List<QnaVO> listAllQna() {
+		return qna.listAllQna();
+	}
+
+	@Override
+	public void updateQna(QnaVO vo) {
+		qna.updateQna(vo);
+		
+	}
+
 }
