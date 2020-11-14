@@ -1,0 +1,30 @@
+
+import java.util.*;
+
+public class number_k {
+
+	public static void main(String[] args) {
+		int[] array = {1, 5, 2, 6, 3, 7, 4};
+		int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+		int[] answer;
+		
+		List<Integer> answer1 = new ArrayList<>();
+		
+		
+		for(int j = 0; j < commands.length; j++) {
+			List<Integer> list = new ArrayList<>();
+			for ( int i = commands[j][0]-1; i < commands[j][1]; i++) {
+				list.add(array[i]);
+			}
+			
+			Collections.sort(list);
+			
+			answer1.add(list.get(commands[j][2]-1));
+		}
+			answer = new int[commands.length];
+			for (int i=0; i<commands.length; i++) {
+				answer[i] = answer1.get(i);
+			}
+			
+	}
+}
